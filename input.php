@@ -1,60 +1,62 @@
 <?php 
 
-/*
- * Koneksi Database
+/**
+ * Gosoftware Media Indonesia 2019
+ * --
+ * --
+ * Gosoftware Media Abadi
+ * http://gosoftware.web.id
+ * e-mail : cs@gosoftware.web.id
+ * WA : 6285263616901
+ * --
+ * --
  */
-include "koneksi.php";
 
-/*
- * Tampilkan data Prodi pada Form
- */
-$sql_1 = "SELECT * FROM tb_prodi";
-$stmt_1 = $koneksi->prepare($sql_1);
-$stmt_1->execute();
+if (!defined('PHPBEGO') == TRUE)
+{
+	header("location:index.php");
+} 
 
 /*
  * Eksekusi saat tombol simpan di klik
  */
 if (isset($_POST['t_simpan'])) {
 
-	$sql_2 = "INSERT INTO tb_mhsw (mhsw_id, mhsw_nim, mhsw_nama, mhsw_id_prodi)
-			VALUES (NULL, :mhsw_nim, :mhsw_nama, :mhsw_id_prodi)";
+	$userid = $_SESSION['user_id'];
 
-	$stmt_2 = $koneksi->prepare($sql_2);
-	$stmt_2->bindParam(":mhsw_nim", $_POST['i_nim']);
-	$stmt_2->bindParam(":mhsw_nama", $_POST['i_nama']);
-	$stmt_2->bindParam(":mhsw_id_prodi", $_POST['i_prodi']);
-	$stmt_2->execute();	
+	$sql = "INSERT INTO tb_mhsw (mhsw_id,  mhsw_id_user, mhsw_nim, mhsw_nama)
+	VALUES (NULL, :mhsw_id_user, :mhsw_nim, :mhsw_nama)";
 
-	header("location:tampil.php");
+	$stmt = $koneksi->prepare($sql);
+	$stmt->bindParam(":mhsw_id_user", $userid);
+	$stmt->bindParam(":mhsw_nim", $_POST['i_nim']);
+	$stmt->bindParam(":mhsw_nama", $_POST['i_nama']);	
+	$stmt->execute();	
+
+	header("location:index.php");
 }
 
 ?>
 
-<h2>Tambah Data Mahasiswa</h2>
-<form action="" method="POST">
-	<table>
-		<tr>
-			<td>NIM</td>
-			<td><input type="text" name="i_nim" autofocus=""></td>
-		</tr>
-		<tr>
-			<td>NAMA</td>
-			<td><input type="text" name="i_nama"></td>
-		</tr>
-		<tr>
-			<td>PRODI</td>
-			<td>
-				<select name="i_prodi">
-					<?php while ($row = $stmt_1->fetch()) { ?>
-						<option value="<?php echo $row['prodi_id']; ?>"><?php echo $row['prodi_nama']; ?></option>
-					<?php } ?>
-				</select>
-			</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><input type="submit" name="t_simpan"></td>
-		</tr>
-	</table>
+<h3 class="mb-3">
+	Tambah Data Mahasiswa 
+</h3>
+
+<form class="card" action="" method="POST">
+	<div class="card-body">
+		<div class="form-group">
+			<label>NIM</label>
+			<input type="text" name="i_nim" class="form-control" autofocus="" required="">
+		</div>
+		<div class="form-group">
+			<label>NAMA</label>
+			<input type="text" name="i_nama" class="form-control" required="">
+		</div>
+	</div>
+	<div class="card-footer">
+		<div class="float-right">
+			<a href="index.php" class="btn btn-danger">KEMBALI</a>
+			<input type="submit" name="t_simpan" class="btn btn-primary" value="SIMPAN">
+		</div>
+	</div>
 </form>
