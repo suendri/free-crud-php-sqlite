@@ -16,6 +16,6 @@ git clone https://github.com/suendri/free-crud-php-sqlite.git
 install DATABASE db/install.php
 ```
 ## Donation
-Please read DONASi.txt
+Please read DONASI.txt
 
 ![](screenshot.jpg)
