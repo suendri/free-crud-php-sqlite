@@ -104,4 +104,16 @@ class Mahasiswa extends Controller {
 
 		return $row;
 	}
+
+	public function delete()
+	{
+
+		$id = $_POST['mhsw_id'];
+
+		$stmt = $this->db->prepare("DELETE FROM tb_mhsw WHERE mhsw_id=:mhsw_id");
+		$stmt->bindParam(":mhsw_id", $id);
+		$stmt->execute();
+
+		return false;
+	}
 }

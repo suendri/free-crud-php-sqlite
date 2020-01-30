@@ -39,7 +39,7 @@ $row = $mhsw->edit($id);
 		</div>
 	</div>
 	<div class="form-group float-right">
-		<input class="btn btn-success" type="submit" name="update" value="UPDATE">
 		<a href="<?php echo URL; ?>/mahasiswa" class="btn btn-primary">KEMBALI</a>
+		<input class="btn btn-success" type="submit" name="update" value="UPDATE">
 	</div>	
 </form>

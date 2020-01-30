@@ -17,7 +17,12 @@ $mhsw = new App\Mahasiswa();
 $row = $mhsw->detail($id);
 ?>
 
-<h2>DETAIL MAHASISWA</h2>
+<h2>
+	DETAIL MAHASISWA
+	<a href="<?php echo URL; ?>/mahasiswa" class="btn btn-primary float-right">KEMBALI</a>
+</h2>
+
+
 <table class="table table-striped">
 	<tr>
 		<th style="width: 100px;">NIM</th>
@@ -32,5 +37,3 @@ $row = $mhsw->detail($id);
 		<td><?php echo $row['mhsw_alamat']; ?></td>
 	</tr>
 </table>
-
-<a href="<?php echo URL; ?>/mahasiswa" class="btn btn-primary">KEMBALI</a>

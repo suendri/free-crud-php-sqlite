@@ -21,7 +21,7 @@
 		</div>
 	</div>
 	<div class="form-group float-right">
-		<input class="btn btn-success" type="submit" name="input" value="SIMPAN">
 		<a href="<?php echo URL; ?>/mahasiswa" class="btn btn-primary">KEMBALI</a>
+		<input class="btn btn-success" type="submit" name="input" value="SIMPAN">
 	</div>	
 </form>
