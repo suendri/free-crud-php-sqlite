@@ -5,17 +5,17 @@
  * --
  * --
  * http://gosoftware.web.id
+ * http://phpbego.wordpress.com
  * e-mail : cs@gosoftware.web.id
  * WA : 6285263616901
  * --
  * --
  */
 
-
 $route = new App\Route();
 
 $route->add('/', function() { 
-	include "web_main.php";
+	include "web_home.php";
 });
 
 $route->add('/mahasiswa', function() { 
@@ -29,6 +29,10 @@ $route->add('/mahasiswa/edit/.+', function($id) {
 });
 $route->add('/mahasiswa/detail/.+', function($id) { 
 	include "mhsw_detail.php";
+});
+
+$route->add('/about', function() { 
+	include "web_about.php";
 });
 
 /*$route->add('/profil/.+', function($name) {

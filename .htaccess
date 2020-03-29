@@ -1,7 +1,7 @@
 Options -Indexes
 RewriteEngine On
 
-# If you are in a subfolder, you don't need this:
+# If you are not in a subfolder, you don't need this:
 RewriteBase /free-crud-php-sqlite/
 
 RewriteCond %{REQUEST_FILENAME} !-f

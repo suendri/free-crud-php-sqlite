@@ -1,9 +1,9 @@
 # CRUD PHP SQLite
-Create Read Update and Delete with PHP using PDO and Database SQLite
+Simple Create Read Update and Delete with PHP using PDO and Database SQLite
 
 ## Update
 1. Composer Ready
-2. OOP Ready
+2. PHP 7.4 Ready
 3. Simple Router
 4. Bootstrap 4.4.1
 5. DataTables 1.10.18
@@ -13,9 +13,10 @@ Create Read Update and Delete with PHP using PDO and Database SQLite
 ## Installation
 ```sh
 git clone https://github.com/suendri/free-crud-php-sqlite.git
-install DATABASE db/install.php
+install Database db/install.php
+set RewriteBase on .htaccess based on folder name
 ```
 ## Donation
 Please read DONASI.txt
 
-![](screenshot.jpg)
+![](screenshot2.jpg)

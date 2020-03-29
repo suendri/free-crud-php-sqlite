@@ -5,6 +5,7 @@
  * --
  * --
  * http://gosoftware.web.id
+ * http://phpbego.wordpress.com
  * e-mail : cs@gosoftware.web.id
  * WA : 6285263616901
  * --
@@ -16,14 +17,10 @@ use PDO;
 
 class Controller {
 
-	protected $db;
+	protected object  $db;
 
 	public function __construct()
 	{
-
-        if (session_id() == "") {
-            session_start();
-        }
 
 		try {
 			$this->db = new PDO("sqlite:" . ROOT . "db/db.sqlite3");
