@@ -12,7 +12,7 @@
  * --
  */
 
-$route = new App\Route();
+$route = new App\Router();
 
 $route->add('/', function() { 
 	include "web_home.php";

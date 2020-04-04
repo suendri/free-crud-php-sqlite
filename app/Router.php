@@ -6,22 +6,22 @@
 
 namespace App;
 
-class Route
+final class Router
 {
 	/**
 	* @var array $_listUri List of URI's to match against
 	*/
-	private $_listUri = array();
+	private array $_listUri = array();
 
 	/**
 	* @var array $_listCall List of closures to call
 	*/
-	private $_listCall = array();
+	private array $_listCall = array();
 
 	/**
 	* @var string $_trim Used class-wide items to clean strings
 	*/
-	private $_trim = '/\^$';
+	private string $_trim = '/\^$';
 
 	/**
 	* add - Adds a URI and Function to the two lists

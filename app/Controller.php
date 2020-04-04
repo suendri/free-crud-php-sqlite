@@ -17,15 +17,17 @@ use PDO;
 
 class Controller {
 
-	protected object  $db;
+	protected object $db;
 
 	public function __construct()
 	{
 
 		try {
+
 			$this->db = new PDO("sqlite:" . ROOT . "db/db.sqlite3");
+			
 		} catch (PDOException $e) {
-			die ("Database tidak terhubung!");
+			die ("Error ! " . $e->getMessage());
 		}
 	}
 }

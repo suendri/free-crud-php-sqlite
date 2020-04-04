@@ -71,7 +71,7 @@
 		<main>
 			<div class="row">			
 				<div class="col">
-					<?php require_once "inc/router.php"; ?>
+					<?php require_once "inc/web.php"; ?>
 				</div>
 			</div>
 		</main>

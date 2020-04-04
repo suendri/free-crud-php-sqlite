@@ -15,8 +15,5 @@
 // Config
 require_once "inc/config.php";
 
-// Instance Controller
-$app = new App\Controller();
-
 // Template
 require_once "layout/index.php";
