@@ -3,9 +3,10 @@
 body {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 16px;
+	background: #F8F9F9;
 }
 
-* {
+.form-control, .btn, .dropdown-menu, .alert, .card {
 	-webkit-border-radius: 0 !important;
 	-moz-border-radius: 0 !important;
 	border-radius: 0 !important;
@@ -38,6 +39,10 @@ footer {
 	background-color: #fff;
 }
 
-.navbar-brand, .nav-link, .navbar-text {
-	color: #ffffff !important;
+.nav-link {
+	color: #BEDAFB !important;
 }
+
+.nav-link:hover {
+	color: #FFFFFF !important;
+} 

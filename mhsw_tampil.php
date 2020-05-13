@@ -23,6 +23,7 @@ $rows = $mhsw->tampil();
 	DATA MAHASISWA
 	<a href="<?php echo URL; ?>/mahasiswa/input" class="btn btn-primary float-right">TAMBAH</a>
 </h2>
+
 <table class="table table-bordered table-sm" id="dtb">
 	<thead>
 		<tr>

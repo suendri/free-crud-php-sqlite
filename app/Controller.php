@@ -22,6 +22,10 @@ class Controller {
 	public function __construct()
 	{
 
+		if (session_id() == "") {
+			session_start();
+		}
+
 		try {
 
 			$this->db = new PDO("sqlite:" . ROOT . "db/db.sqlite3");
