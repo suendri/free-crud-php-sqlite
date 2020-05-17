@@ -22,10 +22,6 @@ class Controller {
 	public function __construct()
 	{
 
-		if (session_id() == "") {
-			session_start();
-		}
-
 		try {
 
 			$this->db = new PDO("sqlite:" . ROOT . "db/db.sqlite3");
@@ -33,5 +29,14 @@ class Controller {
 		} catch (PDOException $e) {
 			die ("Error ! " . $e->getMessage());
 		}
+	}
+	
+	public static function session($key) {
+		
+		if (isset($_SESSION[$key])) {
+			return $_SESSION[$key];
+		}
+		
+		return null;
 	}
 }

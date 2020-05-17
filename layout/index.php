@@ -46,7 +46,7 @@
 						<li class="nav-item">
 							<a class="nav-link" href="<?php echo URL; ?>">Home</a>
 						</li>					
-						<?php if (isset($_SESSION['login']) AND $_SESSION['login'] == true) { ?>	
+						<?php if (App\Controller::session('login') == true) { ?>	
 						<li class="nav-item">
 							<a class="nav-link" href="<?php echo URL; ?>/mahasiswa">Mahasiswa</a>
 						</li>
@@ -59,7 +59,7 @@
 						</li>
 					</ul>
 					<ul class="navbar-nav ml-auto">
-						<?php if (!isset($_SESSION['login']) || $_SESSION['login'] == false) { ?>
+						<?php if (!App\Controller::session('login')) { ?>
 							<li class="nav-item">
 								<a class="nav-link" href="<?php echo URL; ?>/login">Login</a>
 							</li>
@@ -69,7 +69,7 @@
 									<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="<?php echo URL; ?>/akun"><i class="fa fa-user mr-2"></i> <?php echo $_SESSION['user_name']; ?></a>
+									<a class="dropdown-item" href="<?php echo URL; ?>/akun"><i class="fa fa-user mr-2"></i> <?php echo App\Controller::session('user_name') ?></a>
 									<a class="dropdown-item" href="<?php echo URL; ?>/logout"><i class="fa fa-sign-out mr-2"></i> Logout</a></a>
 								</div>
 							</li>
