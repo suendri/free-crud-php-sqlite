@@ -88,7 +88,8 @@
 		</main>
 
 		<footer>
-			Copyright &copy; 2020 - <a href="http://gosoftware.web.id/">http://gosoftware.web.id</a> - <a href="https://phpbego.wordpress.com/">https://phpbego.wordpress.com</a>
+			Copyright © <?php echo date('Y') ?>  All rights reserved.
+			<div><a href="http://gosoftware.web.id/">http://gosoftware.web.id</a> &#183; <a href="https://phpbego.wordpress.com/">https://phpbego.wordpress.com</a></div>
 		</footer>
 
 	</div>
