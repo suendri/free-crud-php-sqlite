@@ -18,7 +18,16 @@ $mhsw = new App\Mahasiswa();
 $row = $mhsw->edit($id);
 ?>
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="<?php echo URL; ?>">Home</a></li>
+    <li class="breadcrumb-item"><a href="<?php echo URL; ?>/mahasiswa">Mahasiswa</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Edit</li>
+  </ol>
+</nav>
+
 <h2>EDIT MAHASISWA</h2>
+
 <form method="POST" action="<?php echo URL; ?>/mhsw_proses.php">
 	<input type="hidden" name="mhsw_id" value="<?php echo $id; ?>">
 	<div class="form-group row">

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="keywords" content="sistem,crud,php,sqlite,phpbego,gosoftware">
-	<meta name="description" content="CRUD PHP SQLite">
+	<meta name="description" content="FREE CRUD PHP SQLite">
 	<meta name="author" content="Suendri">
 
 	<title>CRUD PHP SQLite</title>
@@ -25,37 +25,33 @@
 		});
 	</script>
 </head>
-
 <body>
-	<div class="container">
-		<header>
-			<div class="row">
-				<div class="col">
-					<img src="<?php echo URL; ?>/layout/assets/images/header.jpg" class="img-fluid w-100">
-				</div>
-			</div>
-		</header>
-
-		<section>
-			<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #244f91;">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<header>
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+			<div class="container">
+				<a class="navbar-brand text-uppercase" href="<?php echo URL; ?>">CRUD PHP SQLite</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav mr-auto">
+
+				<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+					<ul class="navbar-nav">
 						<li class="nav-item">
 							<a class="nav-link" href="<?php echo URL; ?>">Home</a>
 						</li>					
 						<?php if (App\Controller::session('login') == true) { ?>	
-						<li class="nav-item">
-							<a class="nav-link" href="<?php echo URL; ?>/mahasiswa">Mahasiswa</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="<?php echo URL; ?>/user">User</a>
-						</li>
+							<li class="nav-item">
+								<a class="nav-link" href="<?php echo URL; ?>/mahasiswa">Mahasiswa</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="<?php echo URL; ?>/user">User</a>
+							</li>
 						<?php } ?>
 						<li class="nav-item">
 							<a class="nav-link" href="<?php echo URL; ?>/about">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="<?php echo URL; ?>/contact">Contact</a>
 						</li>
 					</ul>
 					<ul class="navbar-nav ml-auto">
@@ -66,7 +62,7 @@
 						<?php } else { ?>
 							<li class="nav-item dropdown">
 								<a class="nav-link" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
-									<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+									<i class="fa fa-user" aria-hidden="true"></i>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
 									<a class="dropdown-item" href="<?php echo URL; ?>/akun"><i class="fa fa-user mr-2"></i> <?php echo App\Controller::session('user_name') ?></a>
@@ -76,23 +72,38 @@
 						<?php } ?>
 					</ul>
 				</div>
-			</nav>
-		</section>
+			</div>
+		</nav>
+	</header>
 
-		<main>
+	<main role="main">
+
+		<div class="jumbotron">
+			<div class="container">
+				<h1 class="display-4 font-weight-bold">Gosoftware Media</h1>
+				<div>Free Create Read Update and Delete with PHP using PDO and Database SQLite</div>
+			</div>
+		</div>
+
+		<div class="container">
 			<div class="row">			
 				<div class="col">
 					<?php require_once "inc/web.php"; ?>
 				</div>
 			</div>
-		</main>
+		</div>
 
-		<footer>
-			Copyright © <?php echo date('Y') ?>  All rights reserved.
-			<div><a href="http://gosoftware.web.id/">http://gosoftware.web.id</a> &#183; <a href="https://phpbego.wordpress.com/">https://phpbego.wordpress.com</a></div>
-		</footer>
+	</main>
 
-	</div>
+	<footer>
+		<div class="container">
+			<div class="footer">
+				Copyright © <?php echo date('Y') ?>  All rights reserved &#183;
+				<a href="http://gosoftware.web.id/">http://gosoftware.web.id</a> &#183; <a href="https://phpbego.wordpress.com/">https://phpbego.wordpress.com</a>
+			</div>
+		</div>
+	</footer>
+
 	<script src="<?php echo URL; ?>/layout/assets/js/bootstrap.bundle.min.js"></script>
 
 </body>

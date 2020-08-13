@@ -1,6 +1,15 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="<?php echo URL; ?>">Home</a></li>
+    <li class="breadcrumb-item"><a href="<?php echo URL; ?>/user">User</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Tambah</li>
+  </ol>
+</nav>
+
 <h2>TAMBAH USER</h2>
+
 <form method="POST" action="<?php echo URL; ?>/user_proses.php">
 	<div class="form-group row">
 		<label class="col-sm-2">USERNAME</label>

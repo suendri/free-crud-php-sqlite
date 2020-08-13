@@ -17,7 +17,16 @@ $user = new App\User();
 $row = $user->edit($id);
 ?>
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="<?php echo URL; ?>">Home</a></li>
+    <li class="breadcrumb-item"><a href="<?php echo URL; ?>/user">User</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Edit</li>
+  </ol>
+</nav>
+
 <h2>EDIT USER</h2>
+
 <form method="POST" action="<?php echo URL; ?>/user_proses.php">
 	<input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
 	<div class="form-group row">
@@ -30,7 +39,7 @@ $row = $user->edit($id);
 		<label class="col-sm-2">PASSWORD</label>
 		<div class="col-sm-10">
 			<input class="form-control" type="password" name="user_password" placeholder="Password" autocomplete="off">
-			<small class="text-muted">Kosongkan jika tidak ingin merubah password</small>
+			<small class="text-muted">Kosongkan jika tidak ingin mengubah password</small>
 		</div>
 	</div>
 	<div class="form-group row">

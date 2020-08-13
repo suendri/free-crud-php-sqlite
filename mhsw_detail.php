@@ -18,9 +18,17 @@ $mhsw = new App\Mahasiswa();
 $row = $mhsw->detail($id);
 ?>
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="<?php echo URL; ?>">Home</a></li>
+    <li class="breadcrumb-item"><a href="<?php echo URL; ?>/mahasiswa">Mahasiswa</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Detail</li>
+  </ol>
+</nav>
+
 <h2>
 	DETAIL MAHASISWA
-	<a href="<?php echo URL; ?>/mahasiswa" class="btn btn-primary float-right">KEMBALI</a>
+	<a href="<?php echo URL; ?>/mahasiswa" class="btn btn-primary btn-sm float-right">KEMBALI</a>
 </h2>
 
 

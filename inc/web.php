@@ -18,6 +18,14 @@ $route->add('/', function() {
 	include "web_home.php";
 });
 
+$route->add('/about', function() { 
+	include "web_about.php";
+});
+
+$route->add('/contact', function() { 
+	include "web_contact.php";
+});
+
 $route->add('/mahasiswa', function() { 
 	include "mhsw_tampil.php";
 });
@@ -49,10 +57,6 @@ $route->add('/login', function() {
 });
 $route->add('/logout', function() { 
 	include "web_logout.php";
-});
-
-$route->add('/about', function() { 
-	include "web_about.php";
 });
 
 /*$route->add('/profil/.+', function($name) {

@@ -18,9 +18,16 @@ $rows = $user->tampil();
 
 ?>
 
+<nav aria-label="breadcrumb">
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="<?php echo URL; ?>">Home</a></li>
+		<li class="breadcrumb-item active" aria-current="page">User</li>
+	</ol>
+</nav>
+
 <h2>
 	DATA USER
-	<a href="<?php echo URL; ?>/user/input" class="btn btn-primary float-right">TAMBAH</a>
+	<a href="<?php echo URL; ?>/user/input" class="btn btn-primary btn-sm float-right">TAMBAH</a>
 </h2>
 
 
