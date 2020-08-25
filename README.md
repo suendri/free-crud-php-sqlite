@@ -21,4 +21,4 @@ set RewriteBase on .htaccess based on folder name
 Please read DONASI.txt
 
 ## Screenshot
-![](screenshot3.jpg)
+![](SCREENSHOT.jpg)

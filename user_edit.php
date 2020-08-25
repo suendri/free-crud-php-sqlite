@@ -17,15 +17,17 @@ $user = new App\User();
 $row = $user->edit($id);
 ?>
 
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="<?php echo URL; ?>">Home</a></li>
-    <li class="breadcrumb-item"><a href="<?php echo URL; ?>/user">User</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Edit</li>
-  </ol>
-</nav>
-
 <h2>EDIT USER</h2>
+
+<div class="mb-4">
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="<?php echo URL; ?>">Home</a></li>
+			<li class="breadcrumb-item"><a href="<?php echo URL; ?>/user">User</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Edit</li>
+		</ol>
+	</nav>
+</div>
 
 <form method="POST" action="<?php echo URL; ?>/user_proses.php">
 	<input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
@@ -51,8 +53,10 @@ $row = $user->edit($id);
 			</select>
 		</div>
 	</div>
-	<div class="form-group float-right">
-		<a href="<?php echo URL; ?>/user" class="btn btn-primary">KEMBALI</a>
-		<input class="btn btn-success" type="submit" name="update" value="UPDATE">
+	<div class="form-group">
+		<div class="text-right">
+			<a href="<?php echo URL; ?>/user" class="btn btn-primary">KEMBALI</a>
+			<input class="btn btn-success" type="submit" name="update" value="UPDATE">
+		</div>
 	</div>	
 </form>

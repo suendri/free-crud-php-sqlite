@@ -1,13 +1,13 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
+<h2>ABOUT</h2>
+
 <nav aria-label="breadcrumb">
 	<ol class="breadcrumb">
 		<li class="breadcrumb-item"><a href="<?php echo URL; ?>">Home</a></li>
 		<li class="breadcrumb-item active" aria-current="page">About</li>
 	</ol>
 </nav>
-
-<h2>ABOUT</h2>
 
 <div class="alert alert-info">
 	About this Program

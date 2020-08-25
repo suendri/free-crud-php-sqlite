@@ -18,15 +18,17 @@ $mhsw = new App\Mahasiswa();
 $row = $mhsw->edit($id);
 ?>
 
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="<?php echo URL; ?>">Home</a></li>
-    <li class="breadcrumb-item"><a href="<?php echo URL; ?>/mahasiswa">Mahasiswa</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Edit</li>
-  </ol>
-</nav>
-
 <h2>EDIT MAHASISWA</h2>
+
+<div class="mb-4">
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="<?php echo URL; ?>">Home</a></li>
+			<li class="breadcrumb-item"><a href="<?php echo URL; ?>/mahasiswa">Mahasiswa</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Edit</li>
+		</ol>
+	</nav>
+</div>
 
 <form method="POST" action="<?php echo URL; ?>/mhsw_proses.php">
 	<input type="hidden" name="mhsw_id" value="<?php echo $id; ?>">
@@ -48,8 +50,10 @@ $row = $mhsw->edit($id);
 			<input class="form-control" type="text" name="mhsw_alamat" value="<?php echo $row['mhsw_alamat']; ?>" placeholder="Alamat">
 		</div>
 	</div>
-	<div class="form-group float-right">
-		<a href="<?php echo URL; ?>/mahasiswa" class="btn btn-primary">KEMBALI</a>
-		<input class="btn btn-success" type="submit" name="update" value="UPDATE">
+	<div class="form-group">
+		<div class="text-right">
+			<a href="<?php echo URL; ?>/mahasiswa" class="btn btn-primary">KEMBALI</a>
+			<input class="btn btn-success" type="submit" name="update" value="UPDATE">
+		</div>
 	</div>	
 </form>

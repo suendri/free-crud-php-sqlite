@@ -19,48 +19,52 @@ $rows = $mhsw->tampil();
 
 ?>
 
-<nav aria-label="breadcrumb">
-	<ol class="breadcrumb">
-		<li class="breadcrumb-item"><a href="<?php echo URL; ?>">Home</a></li>
-		<li class="breadcrumb-item active" aria-current="page">Mahasiswa</li>
-	</ol>
-</nav>
-
 <h2>
 	DATA MAHASISWA
 	<a href="<?php echo URL; ?>/mahasiswa/input" class="btn btn-primary btn-sm float-right">TAMBAH</a>
 </h2>
 
-<table class="table table-bordered table-sm" id="dtb">
-	<thead>
-		<tr>
-			<th>NO</th>
-			<th>NIM</th>
-			<th>NAMA</th>
-			<th>AKSI</th>
-		</tr>
-	</thead>
-	<tbody>
-		<?php $no=0; foreach ($rows as $row) { $no++; ?>
+<div class="mb-4">
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="<?php echo URL; ?>">Home</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Mahasiswa</li>
+		</ol>
+	</nav>
+</div>
+
+<div class="table-responsive">
+	<table class="table table-bordered table-sm" id="dtb">
+		<thead>
 			<tr>
-				<td><?php echo $no; ?></td>
-				<td><?php echo $row['mhsw_nim']; ?></td>
-				<td><?php echo $row['mhsw_nama']; ?></td>
-				<td>
-					<a href="<?php echo URL; ?>/mahasiswa/edit/<?php echo $row['mhsw_id']; ?>" class="btn btn-sm btn-warning">
-						<i class="fa fa-edit"></i> Edit
-					</a>
-					<a href="<?php echo URL; ?>/mahasiswa/detail/<?php echo $row['mhsw_id']; ?>" class="btn btn-sm btn-info">
-						<i class="fa fa-info-circle"></i> Detail
-					</a>
-					<button type="button" class="btn btn-sm btn-danger" id="btn-delete" data-id="<?php echo $row['mhsw_id']; ?>">
-						<i class="fa fa-trash"></i> Hapus
-					</button>
-				</td>
+				<th>NO</th>
+				<th>NIM</th>
+				<th>NAMA</th>
+				<th>AKSI</th>
 			</tr>
-		<?php } ?>
-	</tbody>
-</table>
+		</thead>
+		<tbody>
+			<?php $no=0; foreach ($rows as $row) { $no++; ?>
+				<tr>
+					<td><?php echo $no; ?></td>
+					<td><?php echo $row['mhsw_nim']; ?></td>
+					<td><?php echo $row['mhsw_nama']; ?></td>
+					<td>
+						<a href="<?php echo URL; ?>/mahasiswa/edit/<?php echo $row['mhsw_id']; ?>" class="btn btn-sm btn-warning">
+							<i class="fa fa-edit"></i> <span class="d-none d-lg-inline">Edit</span>
+						</a>
+						<a href="<?php echo URL; ?>/mahasiswa/detail/<?php echo $row['mhsw_id']; ?>" class="btn btn-sm btn-info">
+							<i class="fa fa-info-circle"></i> <span class="d-none d-lg-inline">Detail</span>
+						</a>
+						<button type="button" class="btn btn-sm btn-danger" id="btn-delete" data-id="<?php echo $row['mhsw_id']; ?>">
+							<i class="fa fa-trash"></i> <span class="d-none d-lg-inline">Hapus</span>
+						</button>
+					</td>
+				</tr>
+			<?php } ?>
+		</tbody>
+	</table>
+</div>
 
 <!-- Modal hapus -->
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalTitle" aria-hidden="true" data-backdrop="static">

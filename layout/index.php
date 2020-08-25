@@ -86,11 +86,7 @@
 		</div>
 
 		<div class="container">
-			<div class="row">			
-				<div class="col">
-					<?php require_once "inc/web.php"; ?>
-				</div>
-			</div>
+			<?php require_once "inc/web.php"; ?>
 		</div>
 
 	</main>
