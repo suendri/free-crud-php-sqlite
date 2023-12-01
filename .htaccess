@@ -1,10 +1,4 @@
-Options -Indexes
-RewriteEngine On
-
-# If you are not in a subfolder, you don't need this:
-RewriteBase /free-crud-php-sqlite/
-
+RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-
-RewriteRule ^(.+)$ index.php?uri=$1 [QSA,L]
+RewriteRule ^(.*)$ index.php?page=$1 [NC,L,QSA]

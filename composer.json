@@ -1,16 +1,10 @@
 {
     "name": "suendri/free-crud-php-sqlite",
     "description": "Create Read Update and Delete with PHP using PDO and Database SQLite",
-    "require": {
-        "php": "^7.4",
-        "nesbot/carbon": "^2.28"
-    },
-    "require-dev": {
-        "filp/whoops": "^2.7"
-    },
+    "type": "project",
     "authors": [
         {
-            "name": "Suendri",
+            "name": "suendri",
             "email": "suendri@gmail.com"
         }
     ],
@@ -18,5 +12,8 @@
         "psr-4": {
             "App\\": "app/"
         }
+    },
+    "require": {
+        "filp/whoops": "^2.14"
     }
 }

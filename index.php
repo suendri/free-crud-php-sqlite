@@ -1,19 +1,15 @@
 <?php
 
-/**
- * Gosoftware Media Indonesia 2020
- * --
- * --
- * http://gosoftware.web.id
- * http://phpbego.wordpress.com
- * e-mail : cs@gosoftware.web.id
- * WA : 6285263616901
- * --
- * --
- */
+// Laporan error
+error_reporting(E_ALL);
 
-// Config
-require_once "inc/config.php";
+// Autoload
+require_once __DIR__ . "/vendor/autoload.php";
 
-// Template
-require_once "layout/index.php";
+// Whoops
+$whoops = new \Whoops\Run;
+$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops->register();
+
+new App\Config();
+new App\Core\Bootstrap();
